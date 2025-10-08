@@ -6,22 +6,22 @@ const Skills = () => {
     {
       title: 'Programming',
       icon: Code,
-      skills: ['Python', 'JavaScript', 'TypeScript', 'C++', 'Java', 'Go'],
+      skills: ['Python', 'JavaScript', 'TypeScript', 'C++', 'Java', 'Go', 'Rust', 'Kotlin', 'Swift', 'Ruby'],
     },
     {
       title: 'AI & Machine Learning',
       icon: Brain,
-      skills: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'NLP', 'Computer Vision', 'Deep Learning'],
+      skills: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'NLP', 'Computer Vision', 'Deep Learning', 'Transformers', 'BERT', 'GPT', 'LangChain', 'Stable Diffusion'],
     },
     {
       title: 'Tools & Technologies',
       icon: Wrench,
-      skills: ['Docker', 'AWS', 'Git', 'React', 'Node.js', 'PostgreSQL'],
+      skills: ['Docker', 'Kubernetes', 'AWS', 'Azure', 'GCP', 'Git', 'React', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'FastAPI', 'Django'],
     },
     {
       title: 'Research & Data',
       icon: FlaskConical,
-      skills: ['Data Analysis', 'Experiment Design', 'Statistical Modeling', 'Research Papers', 'Data Visualization'],
+      skills: ['Data Analysis', 'Experiment Design', 'Statistical Modeling', 'Research Papers', 'Data Visualization', 'Pandas', 'NumPy', 'Matplotlib', 'Tableau'],
     },
   ];
 
@@ -36,20 +36,20 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="bg-card border-border hover:border-primary/50 transition-all duration-300 glow-effect"
+              className="bg-card border-border hover:border-primary/50 transition-all duration-300 glow-effect group"
             >
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <category.icon className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="text-lg text-foreground">{category.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="max-h-64 overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent hover:scrollbar-thumb-primary/40">
                 <div className="flex flex-wrap gap-2 justify-center">
                   {category.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1 text-sm bg-secondary text-secondary-foreground rounded-full border border-border hover:border-primary/50 transition-colors"
+                      className="px-3 py-1.5 text-xs sm:text-sm bg-secondary text-secondary-foreground rounded-full border border-border hover:border-primary/50 hover:bg-primary/10 transition-all duration-200 cursor-default"
                     >
                       {skill}
                     </span>

@@ -33,6 +33,20 @@ const Projects = () => {
       github: 'https://github.com',
       demo: 'https://demo.example.com',
     },
+    {
+      title: 'Neural Network Optimizer',
+      description: 'Developed novel optimization algorithms for training deep neural networks faster. Improved convergence speed by 35% on standard benchmarks.',
+      tech: ['PyTorch', 'CUDA', 'Python', 'NumPy'],
+      github: 'https://github.com',
+      demo: 'https://demo.example.com',
+    },
+    {
+      title: 'E-commerce Recommendation Engine',
+      description: 'Built a collaborative filtering system for personalized product recommendations. Increased conversion rates by 28% through ML-driven suggestions.',
+      tech: ['TensorFlow', 'Redis', 'Flask', 'MongoDB'],
+      github: 'https://github.com',
+      demo: 'https://demo.example.com',
+    },
   ];
 
   return (
@@ -42,15 +56,17 @@ const Projects = () => {
           Featured Projects
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="bg-card border-border hover:border-primary/50 transition-all duration-300 glow-effect flex flex-col"
+              className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] glow-effect flex flex-col"
             >
               <CardHeader>
-                <CardTitle className="text-xl text-foreground">{project.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">
+                <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+                  {project.title}
+                </CardTitle>
+                <CardDescription className="text-muted-foreground line-clamp-3">
                   {project.description}
                 </CardDescription>
               </CardHeader>
@@ -58,18 +74,22 @@ const Projects = () => {
               <CardContent className="flex-1">
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                    <Badge 
+                      key={tech} 
+                      variant="secondary" 
+                      className="bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors text-xs"
+                    >
                       {tech}
                     </Badge>
                   ))}
                 </div>
               </CardContent>
 
-              <CardFooter className="flex gap-3">
+              <CardFooter className="flex gap-3 pt-4">
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                  className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                   onClick={() => window.open(project.github, '_blank')}
                 >
                   <Github className="mr-2 h-4 w-4" />
@@ -77,7 +97,7 @@ const Projects = () => {
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1"
+                  className="flex-1 transition-all"
                   onClick={() => window.open(project.demo, '_blank')}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />

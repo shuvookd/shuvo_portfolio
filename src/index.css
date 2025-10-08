@@ -56,6 +56,23 @@ All colors MUST be HSL.
   .glow-effect:hover {
     box-shadow: 0 0 30px hsl(var(--glow-primary) / 0.5);
   }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .scrollbar-thumb-primary\/20::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary) / 0.2);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thumb-primary\/40::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--primary) / 0.4);
+  }
+
+  .scrollbar-track-transparent::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
 
 @layer base {

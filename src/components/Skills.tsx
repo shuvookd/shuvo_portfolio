@@ -6,22 +6,22 @@ const Skills = () => {
     {
       title: 'Programming',
       icon: Code,
-      skills: ['Python', 'JavaScript', 'TypeScript', 'C++', 'Java', 'Go', 'Rust', 'Kotlin', 'Swift', 'Ruby'],
+      skills: ['Python', 'JavaScript', 'C','C++', 'Java'],
     },
     {
       title: 'AI & Machine Learning',
       icon: Brain,
-      skills: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'NLP', 'Computer Vision', 'Deep Learning', 'Transformers', 'BERT', 'GPT', 'LangChain', 'Stable Diffusion'],
+      skills: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'NLP', 'Computer Vision', 'Deep Learning', 'BERT', 'GPT', 'LangChain'],
     },
     {
       title: 'Tools & Technologies',
       icon: Wrench,
-      skills: ['Docker', 'Kubernetes', 'AWS', 'Azure', 'GCP', 'Git', 'React', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'FastAPI', 'Django'],
+      skills: ['AWS', 'Azure', 'Git', 'React', 'Node.js', 'PostgreSQL', 'MongoDB', 'Redis', 'FastAPI', 'Django'],
     },
     {
       title: 'Research & Data',
       icon: FlaskConical,
-      skills: ['Data Analysis', 'Experiment Design', 'Statistical Modeling', 'Research Papers', 'Data Visualization', 'Pandas', 'NumPy', 'Matplotlib', 'Tableau'],
+      skills: ['Data Analysis', 'Experiment Design', 'Research Papers', 'Data Visualization', 'Tableau'],
     },
   ];
 

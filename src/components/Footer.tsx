@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="py-8 px-4 bg-card border-t border-border">
       <div className="container mx-auto max-w-6xl text-center">
         <p className="text-sm text-muted-foreground">
-          © {currentYear} John Doe. All rights reserved.
+          © {currentYear} Shuvo Kumar Das. All rights reserved.
         </p>
       </div>
     </footer>

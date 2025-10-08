@@ -4,33 +4,36 @@ import { Card, CardContent } from '@/components/ui/card';
 const Experience = () => {
   const experiences = [
     {
-      period: '2022 - Present',
-      role: 'AI Engineer',
-      company: 'TechVision AI',
+      period: '2025 - Present',
+      role: 'AI Engineer & Data Analyst',
+      company: 'Apptriangle Limited',
       achievements: [
-        'Developed scalable ML pipelines using PyTorch, reducing model training time by 40%',
-        'Collaborated on research leading to 2 publications in top-tier AI conferences',
-        'Led a team of 5 engineers in building real-time NLP systems serving 1M+ users',
+        'Develop and deploy machine learning models and intelligent systems for real-world problem-solving.',
+        'Use deep learning and NLP for advanced AI applications.',
+        'Analyze large datasets to uncover insights and trends.',
+        'Leverage Power BI, Excel, and Python for data visualization and reporting.',
+        'Apply statistical methods and data mining to drive business decisions.',
       ],
     },
     {
-      period: '2020 - 2022',
-      role: 'Full-Stack Developer',
-      company: 'InnovateSoft Solutions',
+      period: '2023 - 2024',
+      role: 'Power Platform Specialist',
+      company: 'Apptriangle Limited',
       achievements: [
-        'Built and deployed 15+ production web applications using React, Node.js, and AWS',
-        'Improved application performance by 60% through code optimization and caching strategies',
-        'Mentored junior developers and established best practices for the engineering team',
+        'Power Apps: Developing custom apps to streamline business processes and enhance user experiences.',
+        'Power Automate: Automating workflows to improve efficiency and eliminate manual tasks.',
+        'Power BI: Designing interactive dashboards and reports to turn data into actionable insights.',
       ],
     },
     {
-      period: '2019 - 2020',
-      role: 'Research Intern',
-      company: 'AI Research Lab, University',
+      period: '2022 - 2023',
+      role: ' Intern - Software Developer',
+      company: 'BJIT',
       achievements: [
-        'Conducted research on deep learning for computer vision, contributing to 1 published paper',
-        'Developed novel data augmentation techniques improving model accuracy by 12%',
-        'Presented findings at international ML symposium',
+        'Gained hands-on experience in developing and optimizing software solutions during my internship at BJIT as a Software Developer.',
+        'Contributed to various projects, enhancing my skills in coding, problem-solving, and software design.',
+        'Worked closely with a talented team, further solidifying my foundation in software development.',
+        'Gained valuable insights into industry practices and workflows.'
       ],
     },
   ];

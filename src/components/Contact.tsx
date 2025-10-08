@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Send } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, Send, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -47,10 +47,11 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Mail, label: 'Email', href: 'mailto:john.doe@example.com', display: 'john.doe@example.com' },
-    { icon: Github, label: 'GitHub', href: 'https://github.com/johndoe', display: 'github.com/johndoe' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/johndoe', display: 'linkedin.com/in/johndoe' },
-    { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/johndoe', display: '@johndoe' },
+    { icon: Mail, label: 'Email',  display: 'iamshuvokd@gmail.com | 01831839121' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/shuvookd', display: 'https://github.com/shuvookd' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/shuvookd/', display: 'https://www.linkedin.com/in/shuvookd' },
+    { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/ShuvooKD/', display: 'https://www.facebook.com/ShuvooKD' }, 
+  
   ];
 
   return (

@@ -21,27 +21,11 @@ const About = () => {
             </div>
 
             <div className="space-y-4 text-left">
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                With over 5 years of experience in software development, I specialize in building 
-                intelligent systems that solve real-world problems. My journey in technology has been 
-                driven by a deep curiosity about artificial intelligence and its potential to transform industries.
-              </p>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-justify ">
+                With over 5 years experience in Software Development, AI Engineering, and Research, I have over 3 years of hands-on experience in designing, developing, and optimizing cutting-edge software solutions. Specializing in Power Platform, particularly Power Apps and Power BI, I have a proven track record of creating data-driven applications that streamline business processes and enhance decision-making. My expertise lies in building custom apps, automating workflows, and visualizing complex data insights to solve real-world business challenges.         </p>
 
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                I've contributed to cutting-edge AI research, with papers published on arXiv focusing on 
-                natural language processing and computer vision. My work spans from developing scalable 
-                machine learning pipelines to creating intuitive user interfaces that make complex technology accessible.
-              </p>
-
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                As a strong advocate for ethical AI and open-source development, I actively contribute to 
-                community projects and share knowledge through technical writing and mentorship. I'm particularly 
-                interested in democratizing AI technology and ensuring its responsible deployment.
-              </p>
-
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new ML frameworks, participating in hackathons, 
-                or discussing the latest advancements in AI research with fellow enthusiasts.
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-justify ">
+                As an AI Engineer, I am passionate about leveraging artificial intelligence and machine learning techniques to create intelligent systems that can analyze, predict, and make data-driven decisions. I am dedicated to staying at the forefront of technology, continually researching and exploring new methodologies to integrate AI into applications. My strong foundation in both software development and AI enables me to bring innovative ideas to life and deliver value through powerful, scalable solutions.
               </p>
 
               <div className="pt-6">

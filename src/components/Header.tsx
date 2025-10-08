@@ -40,7 +40,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center gap-3">
             <a href="#home" className="text-xl sm:text-2xl font-bold text-foreground hover:text-primary transition-colors">
-              John Doe
+              shuvokd
             </a>
           </div>
 
@@ -60,7 +60,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-4">
             <img
               src={profileImage}
-              alt="John Doe Profile"
+              alt="Shuvo Kumar Das Profile"
               className="w-10 h-10 rounded-full object-cover border-2 border-primary/20"
             />
           </div>

@@ -1,0 +1,95 @@
+import { ExternalLink, Github } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+
+const Projects = () => {
+  const projects = [
+    {
+      title: 'AI Chatbot for Healthcare',
+      description: 'Developed an intelligent chatbot using NLP to assist patients with medical queries and appointment scheduling. Reduced response time by 70% and improved patient satisfaction.',
+      tech: ['Python', 'TensorFlow', 'React', 'FastAPI'],
+      github: 'https://github.com',
+      demo: 'https://demo.example.com',
+    },
+    {
+      title: 'Computer Vision Pipeline',
+      description: 'Built a real-time object detection system for manufacturing quality control. Achieved 95% accuracy in defect detection using custom-trained models.',
+      tech: ['PyTorch', 'OpenCV', 'Docker', 'AWS'],
+      github: 'https://github.com',
+      demo: 'https://demo.example.com',
+    },
+    {
+      title: 'Predictive Analytics Dashboard',
+      description: 'Created a full-stack analytics platform for business intelligence. Features interactive visualizations and ML-powered forecasting capabilities.',
+      tech: ['Python', 'Scikit-learn', 'React', 'PostgreSQL'],
+      github: 'https://github.com',
+      demo: 'https://demo.example.com',
+    },
+    {
+      title: 'NLP Research Framework',
+      description: 'Open-source toolkit for sentiment analysis and text classification. Published research paper on arXiv with 500+ citations.',
+      tech: ['Python', 'Transformers', 'Jupyter', 'Git'],
+      github: 'https://github.com',
+      demo: 'https://demo.example.com',
+    },
+  ];
+
+  return (
+    <section id="projects" className="py-20 px-4 bg-secondary/30">
+      <div className="container mx-auto max-w-7xl">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
+          Featured Projects
+        </h2>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <Card
+              key={index}
+              className="bg-card border-border hover:border-primary/50 transition-all duration-300 glow-effect flex flex-col"
+            >
+              <CardHeader>
+                <CardTitle className="text-xl text-foreground">{project.title}</CardTitle>
+                <CardDescription className="text-muted-foreground">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="flex-1">
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech) => (
+                    <Badge key={tech} variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+
+              <CardFooter className="flex gap-3">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() => window.open(project.github, '_blank')}
+                >
+                  <Github className="mr-2 h-4 w-4" />
+                  GitHub
+                </Button>
+                <Button
+                  size="sm"
+                  className="flex-1"
+                  onClick={() => window.open(project.demo, '_blank')}
+                >
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Demo
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;

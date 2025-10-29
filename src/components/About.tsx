@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Code2, Brain, Database, Sparkles } from 'lucide-react';
 import profileImage from '@/assets/profile.jpg';
-import CodeGraphic from './CodeGraphic';
 import ExpertiseIcons from './ExpertiseIcons';
 
 interface Skill {
@@ -61,7 +60,7 @@ const About = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <div className="grid md:grid-cols-[300px,1fr] gap-8 items-start">
-            <div className="flex flex-col justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start">
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <img
@@ -69,9 +68,7 @@ const About = () => {
                   alt="John Doe"
                   className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl object-cover border-2 border-primary/30 shadow-xl transform group-hover:scale-105 transition-transform duration-300"
                 />
-                <CodeGraphic />
               </div>
-              <ExpertiseIcons />
             </div>
 
             <div className="space-y-6 text-left">
@@ -86,7 +83,8 @@ const About = () => {
               {/* Core Skills Section */}
               <div className="pt-4">
                 <h3 className="text-xl font-semibold mb-6 text-foreground">Core Expertise</h3>
-                <div className="grid sm:grid-cols-2 gap-6">
+                <ExpertiseIcons />
+                <div className="grid sm:grid-cols-2 gap-6 mt-6">
                   {skills.map((skill, index) => {
                     const Icon = skill.icon;
                     return (

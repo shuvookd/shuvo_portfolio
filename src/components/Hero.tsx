@@ -32,7 +32,7 @@ const Hero = () => {
             <Button
   size="lg"
   className="glow-effect group w-full sm:w-auto"
-  onClick={() => window.open('https://drive.google.com/uc?export=download&id=12GgJn39ceyr6t-YJ51jgNEOpN66aVcxv', '_blank')}
+  onClick={() => window.open('https://drive.google.com/uc?export=download&id=1Hcznu_LwBF1zHFN1wCDaK6cYoANZwL9_', '_blank')}
 >
   <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
   Download Resume

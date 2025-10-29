@@ -26,7 +26,7 @@ const Experience = () => {
       ],
     },
     {
-      period: '2022 - 2023',
+      period: '2023',
       role: ' Intern - Software Developer',
       company: 'BJIT',
       achievements: [

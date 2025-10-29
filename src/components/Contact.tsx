@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Mail, Github, Linkedin, Twitter, Send, Facebook,PhoneOutgoingIcon } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, Send, Facebook, PhoneOutgoingIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser'; // Added EmailJS import
 
 const Contact = () => {
   const { toast } = useToast();
@@ -16,7 +17,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Form validation
     if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
       toast({
@@ -38,12 +39,32 @@ const Contact = () => {
       return;
     }
 
-    toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I\'ll get back to you soon.',
+    // Send email using EmailJS
+    emailjs.send(
+      'service_5kjhg5i',   // Replace with your EmailJS service ID
+      'template_q7bmc9d',  // Replace with your EmailJS template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      '_o1jAcCqmDodGrhHt'    // Replace with your EmailJS public key
+    )
+    .then(() => {
+      toast({
+        title: 'Message Sent!',
+        description: 'Thank you for reaching out. I\'ll get back to you soon.',
+      });
+      setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((error) => {
+      console.error(error);
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again later.',
+        variant: 'destructive',
+      });
     });
-
-    setFormData({ name: '', email: '', message: '' });
   };
 
   const socialLinks = [
@@ -51,7 +72,6 @@ const Contact = () => {
     { icon: Github, label: 'GitHub', href: 'https://github.com/shuvookd', display: 'https://github.com/shuvookd' },
     { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/shuvookd/', display: 'https://www.linkedin.com/in/shuvookd' },
     { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/ShuvooKD/', display: 'https://www.facebook.com/ShuvooKD' }, 
-  
   ];
 
   return (

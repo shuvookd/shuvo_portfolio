@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Code2, Brain, Database, Sparkles } from 'lucide-react';
 import profileImage from '@/assets/profile.jpg';
+import CodeGraphic from './CodeGraphic';
 
 interface Skill {
   name: string;
@@ -67,6 +68,7 @@ const About = () => {
                   alt="John Doe"
                   className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl object-cover border-2 border-primary/30 shadow-xl transform group-hover:scale-105 transition-transform duration-300"
                 />
+                <CodeGraphic />
               </div>
             </div>
 

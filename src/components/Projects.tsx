@@ -20,7 +20,7 @@ const Projects = () => {
       demo: 'https://github.com/shuvookd/mediCare',
     },
     {
-      title: 'Cafe Management System',
+      title: 'Cafe Management Solution',
       description: 'Created a full-stack analytics platform for business intelligence. Features interactive visualizations and ML-powered forecasting capabilities.',
       tech: ['Java', 'Java-Swing', 'MySQL'],
       github: 'https://github.com/shuvookd',

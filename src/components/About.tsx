@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Code2, Brain, Database, Sparkles } from 'lucide-react';
 import profileImage from '@/assets/profile.jpg';
 import CodeGraphic from './CodeGraphic';
+import ExpertiseIcons from './ExpertiseIcons';
 
 interface Skill {
   name: string;
@@ -60,7 +61,7 @@ const About = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <div className="grid md:grid-cols-[300px,1fr] gap-8 items-start">
-            <div className="flex justify-center md:justify-start">
+            <div className="flex flex-col justify-center md:justify-start">
               <div className="relative group">
                 <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                 <img
@@ -70,6 +71,7 @@ const About = () => {
                 />
                 <CodeGraphic />
               </div>
+              <ExpertiseIcons />
             </div>
 
             <div className="space-y-6 text-left">

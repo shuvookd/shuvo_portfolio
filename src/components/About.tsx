@@ -55,40 +55,43 @@ const About = () => {
           About Me
         </h2>
 
-        <Card className={`p-6 sm:p-8 md:p-12 bg-card border-border transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        <Card className={`p-4 sm:p-6 md:p-8 lg:p-12 bg-card border-border transition-all duration-700 delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-          <div className="] gap-8 items-start">
-
-
-            <div className="space-y-6 text-left  ">
-              <div className='flex gap-10 '>
-                <div className="flex justify-center md:justify-start   justify-center item-center">
-                  <div className="relative group flex justify-center item-center  ">
-                    <div className="absolute  inset-0 bg-primary/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                    <img
-                      src={profileImage}
-                      alt="John Doe"
-                      className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-2xl object-cover border-2 border-primary/30 shadow-xl transform group-hover:scale-105 transition-transform duration-300 justify-center item-center  mt-6"
-                    />
-                  </div>
-                </div>
-                <div className='flex-1'>
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-justify">
-                    With over 5 years experience in Software Development, AI Engineering, and Research, I have over 3 years of hands-on experience in designing, developing, and optimizing cutting-edge software solutions. Specializing in Power Platform, particularly Power Apps and Power BI, I have a proven track record of creating data-driven applications that streamline business processes and enhance decision-making.
-                  </p>
-
-                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed text-justify">
-                    As an AI Engineer, I am passionate about leveraging artificial intelligence and machine learning techniques to create intelligent systems that can analyze, predict, and make data-driven decisions. I am dedicated to staying at the forefront of technology, continually researching and exploring new methodologies to integrate AI into applications.
-                  </p>
+          <div className="space-y-6">
+            {/* Profile and Introduction Section */}
+            <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
+              {/* Profile Image */}
+              <div className="flex justify-center lg:justify-start w-full lg:w-auto">
+                <div className="relative group flex justify-center items-center">
+                  <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                  <img
+                    src={profileImage}
+                    alt="Shuvo Kumar Das Profile"
+                    className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-2xl object-cover border-2 border-primary/30 shadow-xl transform group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
               </div>
 
-              {/* Core Skills Section */}
-              <div className="pt-4 ">
-                <h3 className="text-xl font-semibold mb-6 text-foreground">Core Expertise</h3>
-                <div className=' flex gap-10 '>
+              {/* Introduction Text */}
+              <div className="flex-1 space-y-4">
+                <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed text-justify">
+                  With over 5 years experience in Software Development, AI Engineering, and Research, I have over 3 years of hands-on experience in designing, developing, and optimizing cutting-edge software solutions. Specializing in Power Platform, particularly Power Apps and Power BI, I have a proven track record of creating data-driven applications that streamline business processes and enhance decision-making.
+                </p>
+
+                <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed text-justify">
+                  As an AI Engineer, I am passionate about leveraging artificial intelligence and machine learning techniques to create intelligent systems that can analyze, predict, and make data-driven decisions. I am dedicated to staying at the forefront of technology, continually researching and exploring new methodologies to integrate AI into applications.
+                </p>
+              </div>
+            </div>
+
+            {/* Core Skills Section */}
+            <div className="pt-4">
+              <h3 className="text-lg sm:text-xl font-semibold mb-6 text-foreground">Core Expertise</h3>
+              <div className="flex flex-col lg:flex-row gap-6 lg:gap-10">
+                <div className="w-full lg:w-auto">
                   <ExpertiseIcons />
-                  <div className="grid sm:grid-cols-2 gap-6 mt-6   flex-1">
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 flex-1">
                     {skills.map((skill, index) => {
                       const Icon = skill.icon;
                       return (
@@ -123,17 +126,16 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="pt-6">
-                <Button
-                  size="lg"
-                  className="glow-effect group"
-                  onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
-                    Get in Touch
-                  </span>
-                </Button>
-              </div>
+            <div className="pt-6 flex justify-center sm:justify-start">
+              <Button
+                size="lg"
+                className="glow-effect group w-full sm:w-auto"
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
+                  Get in Touch
+                </span>
+              </Button>
             </div>
           </div>
         </Card>

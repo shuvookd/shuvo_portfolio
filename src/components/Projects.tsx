@@ -50,28 +50,28 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-secondary/30">
+    <section id="projects" className="py-12 sm:py-16 md:py-20 px-4 bg-secondary/30">
       <div className="container mx-auto max-w-7xl">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-primary">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 text-primary">
           Featured Projects
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 auto-rows-fr">
           {projects.map((project, index) => (
             <Card
               key={index}
               className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:scale-[1.02] glow-effect flex flex-col"
             >
-              <CardHeader>
-                <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
+              <CardHeader className="p-4 sm:p-6">
+                <CardTitle className="text-lg sm:text-xl text-foreground group-hover:text-primary transition-colors">
                   {project.title}
                 </CardTitle>
-                <CardDescription className="text-muted-foreground line-clamp-3">
+                <CardDescription className="text-sm text-muted-foreground line-clamp-3">
                   {project.description}
                 </CardDescription>
               </CardHeader>
 
-              <CardContent className="flex-1">
+              <CardContent className="flex-1 p-4 sm:p-6 pt-0">
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <Badge 
@@ -85,22 +85,23 @@ const Projects = () => {
                 </div>
               </CardContent>
 
-              <CardFooter className="flex gap-3 pt-4">
+              <CardFooter className="flex gap-2 sm:gap-3 p-4 sm:p-6 pt-4">
                 <Button
                   variant="outline"
                   size="sm"
-                  className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                  className="flex-1 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all text-xs sm:text-sm"
                   onClick={() => window.open(project.github, '_blank')}
                 >
-                  <Github className="mr-2 h-4 w-4" />
-                  GitHub
+                  <Github className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="hidden xs:inline">GitHub</span>
+                  <span className="xs:hidden">Code</span>
                 </Button>
                 <Button
                   size="sm"
-                  className="flex-1 transition-all"
+                  className="flex-1 transition-all text-xs sm:text-sm"
                   onClick={() => window.open(project.demo, '_blank')}
                 >
-                  <ExternalLink className="mr-2 h-4 w-4" />
+                  <ExternalLink className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                   Demo
                 </Button>
               </CardFooter>

@@ -9,20 +9,20 @@ const ExpertiseIcons = () => {
   ];
 
   return (
-    <div className="mt-8 grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full lg:w-auto">
       {icons.map(({ Icon, label, delay }) => (
         <div
           key={label}
-          className="group flex flex-col items-center gap-2 p-4 rounded-lg bg-secondary/30 border border-border/50 hover:border-primary/30 hover:bg-secondary/50 transition-all duration-300"
+          className="group flex flex-col items-center gap-2 p-3 sm:p-4 rounded-lg bg-secondary/30 border border-border/50 hover:border-primary/30 hover:bg-secondary/50 transition-all duration-300"
           style={{ animationDelay: delay }}
         >
           <div className="relative">
             <div className="absolute inset-0 bg-primary/20 rounded-full blur-md group-hover:blur-lg transition-all duration-300"></div>
-            <div className="relative p-3 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300">
-              <Icon className="w-6 h-6 text-primary" />
+            <div className="relative p-2 sm:p-3 bg-primary/10 rounded-full group-hover:scale-110 transition-transform duration-300">
+              <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
           </div>
-          <span className="text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+          <span className="text-xs font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-300 text-center">
             {label}
           </span>
         </div>

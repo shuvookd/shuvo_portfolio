@@ -143,7 +143,7 @@ const Projects = () => {
       demo: 'https://github.com/shuvookd/Parts_Management_System?tab=readme-ov-file#-parts-management-system',
     },
     {
-      title: 'E-commerce Recommendation Engine',
+      title: 'E-commerce Recommendation',
       description: 'Built a collaborative filtering system for personalized product recommendations. Increased conversion rates by 28% through ML-driven suggestions.',
       tech: ['TensorFlow', 'Redis', 'Flask', 'MongoDB'],
       github: 'https://github.com/shuvookd',

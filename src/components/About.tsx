@@ -75,11 +75,13 @@ const About = () => {
               {/* Introduction Text */}
               <div className="flex-1 space-y-4">
                 <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed text-justify">
-                  With over 5 years experience in Software Development, AI Engineering, and Research, I have over 3 years of hands-on experience in designing, developing, and optimizing cutting-edge software solutions. Specializing in Power Platform, particularly Power Apps and Power BI, I have a proven track record of creating data-driven applications that streamline business processes and enhance decision-making.
+                 With 5+ years in Software Development and AI Engineering, I build smart, data-driven solutions that improve business processes and decision-making. I have hands-on expertise with the Microsoft Power Platform, especially Power Apps and Power BI, delivering efficient and scalable applications.
+
+
                 </p>
 
                 <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed text-justify">
-                  As an AI Engineer, I am passionate about leveraging artificial intelligence and machine learning techniques to create intelligent systems that can analyze, predict, and make data-driven decisions. I am dedicated to staying at the forefront of technology, continually researching and exploring new methodologies to integrate AI into applications.
+                  Passionate about AI and machine learning, I focus on creating modern systems that analyze, predict, and automate intelligently. I continuously learn and experiment with new technologies to drive innovation and deliver meaningful impact.
                 </p>
               </div>
             </div>
@@ -125,18 +127,6 @@ const About = () => {
                   </div>
                 </div>
               </div>
-
-            <div className="pt-6 flex justify-center sm:justify-start">
-              <Button
-                size="lg"
-                className="glow-effect group w-full sm:w-auto"
-                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                <span className="group-hover:translate-x-1 transition-transform duration-300 inline-block">
-                  Get in Touch
-                </span>
-              </Button>
-            </div>
           </div>
         </Card>
       </div>

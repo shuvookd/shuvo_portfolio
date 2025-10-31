@@ -132,15 +132,15 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button
-                size="lg"
-                variant="outline"
-                className="group w-full sm:w-auto border-2 border-primary/50 bg-background/50 backdrop-blur-sm hover:bg-primary/10 hover:border-primary"
-                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1Hcznu_LwBF1zHFN1wCDaK6cYoANZwL9_', '_blank')}
-              >
-                <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                Download CV
-              </Button>
+            <Button
+              size="lg"
+              variant="hero"
+              className="group w-full sm:w-auto"
+              onClick={() => window.open('https://drive.google.com/uc?export=download&id=1Hcznu_LwBF1zHFN1wCDaK6cYoANZwL9_', '_blank')}
+            >
+              <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+              Download CV
+            </Button>
             </motion.div>
           </motion.div>
         </motion.div>

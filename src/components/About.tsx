@@ -162,11 +162,11 @@ const About = () => {
                 delay: 0.4
               }}>
                   <div className="space-y-4">
-                    <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed text-justify">
                       With <span className="text-foreground font-semibold">5+ years</span> in Software Development and AI Engineering, I craft intelligent, data-driven solutions that transform business processes and drive strategic decision-making. My expertise spans the <span className="text-foreground font-semibold">Microsoft Power Platform</span>, where I excel in building efficient, scalable applications with Power Apps and Power BI.
                     </p>
 
-                    <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+                    <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed text-justify">
                       Passionate about <span className="text-foreground font-semibold">AI and machine learning</span>, I specialize in creating cutting-edge systems that analyze, predict, and automate with precision. I thrive on continuous learning and experimentation, pushing the boundaries of technology to deliver meaningful, measurable impact.
                     </p>
                   </div>
@@ -184,7 +184,27 @@ const About = () => {
                 }}>
                     {highlights.map((highlight, index) => {
                     const Icon = highlight.icon;
-                    return;
+                    return <motion.div key={index} initial={{
+                      opacity: 0,
+                      y: 10
+                    }} animate={isInView ? {
+                      opacity: 1,
+                      y: 0
+                    } : {
+                      opacity: 0,
+                      y: 10
+                    }} transition={{
+                      duration: 0.5,
+                      delay: 0.7 + index * 0.1
+                    }} whileHover={{
+                      scale: 1.05,
+                      y: -2
+                    }} className="flex items-center gap-3 p-3 bg-card/50 rounded-lg border border-border/50 backdrop-blur-sm group/badge cursor-default">
+                        <div className="p-2 bg-primary/10 rounded-lg group-hover/badge:bg-primary/20 transition-colors">
+                          <Icon className={`w-4 h-4 ${highlight.color}`} />
+                        </div>
+                        <span className="text-sm font-medium text-foreground">{highlight.text}</span>
+                      </motion.div>;
                   })}
                   </motion.div>
                 </motion.div>

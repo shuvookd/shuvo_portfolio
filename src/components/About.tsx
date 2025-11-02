@@ -172,41 +172,7 @@ const About = () => {
                   </div>
 
                   {/* Highlight Badges */}
-                  <motion.div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2" initial={{
-                  opacity: 0
-                }} animate={isInView ? {
-                  opacity: 1
-                } : {
-                  opacity: 0
-                }} transition={{
-                  duration: 0.6,
-                  delay: 0.6
-                }}>
-                    {highlights.map((highlight, index) => {
-                    const Icon = highlight.icon;
-                    return <motion.div key={index} initial={{
-                      opacity: 0,
-                      y: 10
-                    }} animate={isInView ? {
-                      opacity: 1,
-                      y: 0
-                    } : {
-                      opacity: 0,
-                      y: 10
-                    }} transition={{
-                      duration: 0.5,
-                      delay: 0.7 + index * 0.1
-                    }} whileHover={{
-                      scale: 1.05,
-                      y: -2
-                    }} className="flex items-center gap-3 p-3 bg-card/50 rounded-lg border border-border/50 backdrop-blur-sm group/badge cursor-default">
-                        <div className="p-2 bg-primary/10 rounded-lg group-hover/badge:bg-primary/20 transition-colors">
-                          <Icon className={`w-4 h-4 ${highlight.color}`} />
-                        </div>
-                        <span className="text-sm font-medium text-foreground">{highlight.text}</span>
-                      </motion.div>;
-                  })}
-                  </motion.div>
+                  
                 </motion.div>
               </div>
 

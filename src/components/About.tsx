@@ -162,7 +162,7 @@ const About = () => {
                 delay: 0.4
               }}>
                   <div className="space-y-4">
-                    <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed text-justify p-4 bg-primary/5 border-l-4 border-primary rounded-r-lg backdrop-blur-sm">
+                    <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed text-justify">
                       With <span className="text-foreground font-semibold">5+ years</span> in Software Development and AI Engineering, I craft intelligent, data-driven solutions that transform business processes and drive strategic decision-making. My expertise spans the <span className="text-foreground font-semibold">Microsoft Power Platform</span>, where I excel in building efficient, scalable applications with Power Apps and Power BI.
                     </p>
 

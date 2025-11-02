@@ -27,7 +27,7 @@ const About = () => {
     { icon: Rocket, text: '5+ Years Experience', color: 'text-primary' },
     { icon: BookOpen, text: 'Research & AI Projects', color: 'text-primary' },
     { icon: Wrench, text: 'Full-Stack & AI Systems', color: 'text-primary' },
-    { icon: GraduationCap, text: 'MSc Background', color: 'text-primary' },
+    { icon: GraduationCap, text: 'Graduated from EWU', color: 'text-primary' },
   ];
 
   return (

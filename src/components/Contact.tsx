@@ -78,9 +78,9 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: PhoneOutgoingIcon, label: 'Contact', href: 'tel:01831839121', display: '01831839121 | iamshuvokd@gmail.com' },
-    { icon: Github, label: 'GitHub', href: 'https://github.com/shuvookd', display: 'github.com/shuvookd' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/shuvookd/', display: 'linkedin.com/in/shuvookd' },
-    { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/ShuvooKD/', display: 'facebook.com/ShuvooKD' }, 
+    { icon: Github, label: 'GitHub', href: 'https://github.com/iamshuvokd', display: 'github.com/iamshuvokd' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/iamshuvokd/', display: 'linkedin.com/in/iamshuvokd' },
+    { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/iamshuvokd/', display: 'facebook.com/iamshuvokd' }, 
   ];
 
   return (

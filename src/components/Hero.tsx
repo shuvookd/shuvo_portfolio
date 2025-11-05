@@ -136,7 +136,7 @@ const Hero = () => {
               size="lg"
               variant="hero"
               className="group w-full sm:w-auto"
-              onClick={() => window.open('https://drive.google.com/uc?export=download&id=1Hcznu_LwBF1zHFN1wCDaK6cYoANZwL9_', '_blank')}
+              onClick={() => window.open('https://drive.google.com/uc?export=download&id=1Mr5IU8XihVUr4KgWu-_x7EEc9R4vUIPE', '_blank')}
             >
               <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
               Download CV
